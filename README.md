@@ -6,7 +6,7 @@ This is a outstanding WP Blog theme developed on Material Design for Bootstrap 4
 * Theme URI: https://www.musulmanlar.com 
 * Description: This is outstanding WP Blog theme developed on Material Design for Bootstrap 4
 * Version: 1.0
-* Author: Namsiz
+* Author: Musulmanlar
 * Author URI: https://www.musulmanlar.com/?author=101011
 * License: GNU General Public License v2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
