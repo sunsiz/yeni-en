@@ -1,0 +1,522 @@
+/*
+Theme Name: Yeni
+Theme URI: https://www.musulmanlar.com 
+Description: This is outstanding WP Blog theme developed on Material Design for Bootstrap 4
+Version: 1.0
+Author: Namsiz Musulman
+Author URI: https://www.musulmanlar.com/?author=101011
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Yeni
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+ * @package Yeni
+ * @subpackage Yeni
+ * @since Yeni 1.0
+*/
+
+body{font-family: "UKIJ Tuz Tom"; }
+
+/*--------------------------------------------------------------
+2.0 Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*--------------------------------------------------------------
+3.0 Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+	display: inline;
+	float: left;
+	/*margin-right: 1.5em;*/
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	/*margin-left: 1.5em;*/
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+4.0 Clearings
+--------------------------------------------------------------*/
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.entry-footer:before,
+.entry-footer:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.nav-links:before,
+.nav-links:after,
+.pagination:before,
+.pagination:after,
+.comment-author:before,
+.comment-author:after,
+.widget-area:before,
+.widget-area:after,
+.widget:before,
+.widget:after,
+.comment-meta:before,
+.comment-meta:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.entry-footer:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.nav-links:after,
+.pagination:after,
+.comment-author:after,
+.widget-area:after,
+.widget:after,
+.comment-meta:after {
+	clear: both;
+}
+
+/* Typography for Uyghur Font */
+
+html[lang="ug-CN"] body,
+html[lang="ug-CN"] button,
+html[lang="ug-CN"] input,
+html[lang="ug-CN"] select,
+html[lang="ug-CN"] textarea,
+html[lang="ug-CN"] h1,
+html[lang="ug-CN"] h2,
+html[lang="ug-CN"] h3,
+html[lang="ug-CN"] h4,
+html[lang="ug-CN"] h5,
+html[lang="ug-CN"] h6 {
+	/*font-family: 'UKIJ Tuz Tom', 'Droid Naskh Shift Alt', 'Microsoft Uighur', Tahoma, Arial, sans-serif;*/
+	font-weight: 800;
+}
+
+
+
+.wp-caption,
+.gallery-caption {
+	color: #666;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+
+/*--------------------------------------------------------------
+14.0 Comments
+--------------------------------------------------------------*/
+
+#comments {
+	clear: both;
+	padding: 2em 0 0.5em;
+}
+
+.comments-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+	margin-bottom: 1.5em;
+}
+
+.comment-list,
+.comment-list .children {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment-list li:before {
+	display: none;
+}
+
+.comment-body {
+	margin-left: 65px;
+}
+
+.comment-author {
+	font-size: 16px;
+	font-size: 1rem;
+	margin-bottom: 0.4em;
+	position: relative;
+	z-index: 2;
+}
+
+.comment-author .avatar {
+	height: 50px;
+	left: -65px;
+	position: absolute;
+	width: 50px;
+}
+
+.comment-author .says {
+	display: none;
+}
+
+.comment-list> .comment> .comment-author> .says::after {
+	content:"سورىدى:";
+}
+
+.comment-list> .comment> .byuser> .comment-author> .says::after {
+	content:"جاۋابى:";
+}
+
+.comment-meta {
+	margin-bottom: 1.5em;
+}
+
+.comment-metadata {
+	color: #767676;
+	font-size: 10px;
+	font-size: 0.625rem;
+	font-weight: 800;
+	letter-spacing: 0.1818em;
+	text-transform: uppercase;
+}
+
+.comment-metadata a {
+	color: #767676;
+}
+
+.comment-metadata a.comment-edit-link {
+	color: #222;
+	margin-left: 1em;
+}
+
+.comment-body {
+	color: #333;
+	font-size: 14px;
+	font-size: 0.875rem;
+	margin-bottom: 4em;
+}
+
+.comment .reply{display:none;}
+
+.comment-reply-link {
+	font-weight: 800;
+	position: relative;
+	display:none;
+}
+
+.comment-reply-link .icon {
+	color: #222;
+	left: -2em;
+	height: 1em;
+	position: absolute;
+	top: 0;
+	width: 1em;
+}
+
+.children .comment-author .avatar {
+	height: 30px;
+	left: -45px;
+	width: 30px;
+}
+
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+	border: 1px solid #333;
+	padding: 2px;
+}
+
+.no-comments,
+.comment-awaiting-moderation {
+	color: #767676;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-style: italic;
+}
+
+.comments-pagination {
+	margin: .2em;
+	text-align: center;
+}
+
+.form-submit {
+	text-align: right;
+}
+
+
+/*--------------------------------------------------------------
+16.1 Galleries
+--------------------------------------------------------------*/
+
+.gallery-item {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin: 0 0 1.5em;
+	padding: 0 1em 0 0;
+	width: 50%;
+}
+
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-item a,
+.gallery-item a:hover,
+.gallery-item a:focus,
+.widget-area .gallery-item a,
+.widget-area .gallery-item a:hover,
+.widget-area .gallery-item a:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: none;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.gallery-item a img {
+	display: block;
+	-webkit-transition: -webkit-filter 0.2s ease-in;
+	transition: -webkit-filter 0.2s ease-in;
+	transition: filter 0.2s ease-in;
+	transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.gallery-item a:hover img,
+.gallery-item a:focus img {
+	-webkit-filter: opacity(60%);
+	filter: opacity(60%);
+}
+
+.gallery-caption {
+	display: block;
+	text-align: left;
+	padding: 0 10px 0 0;
+	margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+Custom Styles
+--------------------------------------------------------------*/
+
+
+
+.navbar-nav, .navbar-nav>ul {
+	padding-right: 10px;
+}
+main {
+  padding-top: 1.3rem;
+  padding-bottom: 1rem;
+}
+#sidebar {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #4285F4;
+  /*border: 1px solid #ddd;*/
+  color:  #fff;
+  font-weight:  bold;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+#sidebar>a {color:white;}
+.sidebar {padding: 15px;padding-top:0;}
+.widget-item ul, .category-posts-internal, #menu-quran-menu, .sidebar>ul {
+  padding: 9px;
+  list-style-type: none;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);;
+}
+.sidebar li {
+  padding: 9px!important;
+  margin: auto!important;
+  border: 1px solid whitesmoke!important;
+}
+.sidebar li:hover, .sure-list:hover {
+	background-color: #2196f3;/*#64b5f6;#0091ea;*/
+    webkit-transition: -webkit-box-shadow .55s;
+    transition: -webkit-box-shadow .55s;
+    transition: box-shadow .55s;
+    transition: box-shadow .55s,-webkit-box-shadow .55s;
+}
+.cat-post-item:hover a, .sidebar li:hover a, .sure-list:hover a {
+    color: #fff;
+}
+.page-footer title {
+	padding: 30px;
+}
+.post-wrapper {
+    box-shadow: 0 12px 38px -16px rgba(0, 0, 0, 0.56), 0 1px 5px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px -5px rgba(0, 0, 0, 0.2);
+    padding: 18px;
+    margin: 2px 12px;
+    border-radius: 3px;
+}
+.pagination {
+display: inline-flex;
+}
+.rtl { direction: rtl!important;}
+.social-section a, #goruntuleme { padding:10px;}
+.md-form .prefix {
+    margin: .5rem;
+}
+.md-form .prefix~label {
+    margin-right: 4rem;
+}
+.md-form .prefix~input, .md-form .prefix~textarea {
+    margin: 0 3rem;
+	width: 90%;
+}
+.md-form label {
+    right: 0;
+}
+.md-form, .md-form .btn {
+    margin-top: 1.5rem;
+}
+.sure-list {
+	margin: 0!important;
+	border: 0!important;
+	list-style-type: none;
+}
+/*media all*/
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(21, 101, 192, 0.9);
+    text-align: center;
+    font-size: 0.9rem;
+}
+footer.page-footer .container-fluid {
+	box-shadow: 0px 8px 7px 0px rgba(0,0,0,0.2), 0px 6px 2px 0px rgba(0,0,0,0.19);
+}
+footer.page-footer {
+	box-shadow: 0px -5px 6px 0px rgba(0,0,0,0.2), 0px 6px 20px 0px rgba(0,0,0,0.19);
+}
+ol.cf-ol li {list-style-type:none;}
+ol.cf-ol li input {width: 200px; margin: 9px;}
+ol.cf-ol li textarea {height:auto;}
+.wpcf7-submit {
+    font-size: .8rem;
+    padding: .85rem 2.13rem;
+    margin: 6px;
+    border-radius: 2px;
+    border: 0;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    white-space: normal!important;
+    cursor: pointer;
+	background-color: #5a95f5!important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	color: #FFF!important;
+	display: inline-block;
+}
+.xoxo {
+	list-style-type: none;
+    margin: 0;
+    padding: 19px;
+	direction: rtl;
+}
+.xoxo li {
+    display: inline;
+}
+.xoxo li a {
+    /*padding: .85rem 2.13rem;*/
+    margin: 6px;
+    white-space: normal!important;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out;
+	position: relative;
+    overflow: hidden;
+    z-index: 1;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+	color: #FFF!important;
+	display: inline-block;
+    line-height: 1.5;
+	background-color: #4285F4;
+}
+.wpcf7-textarea{height:160px;}
+.comment.byuser{
+	margin: 1px 40px 9px;
+    background-color: rgba(246, 245, 240, 0.2);
+    padding: 12px;
+	border-radius: 7px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    /* width: fit-content; */}
+@media (max-width: 768px) {.page-footer ul li a{line-height:48px;}}
+/*@media (min-width: 992px) {.page-footer ul li a{line-height:36px;}}*/
+#wpstats{display:contents;}
+.page-footer .footer-copyright .container-fluid{padding:0;}
+.pagination .page-link.active{box-shadow:none!important;}
+#author .feature{font-style: italic; font-size: 1.1rem;}
