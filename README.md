@@ -1,5 +1,9 @@
 # yeni theme
-* This is a outstanding WP Blog theme developed on Material Design for Bootstrap 4
+This is a outstanding WP Blog theme developed on Material Design for Bootstrap 4
+
+ScreenShot     ![Screenshot.png](screenshot.png "screenshot.png") 
+
+### Theme details:
 * Theme Name: Yeni
 * Theme URI: https://www.musulmanlar.com 
 * Description: This is outstanding WP Blog theme developed on Material Design for Bootstrap 4
